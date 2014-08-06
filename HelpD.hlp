@@ -1,0 +1,53 @@
+Allgemeines:
+---------
+
+Mit ImgMeta k”nnen zus„tzliche Informationen an Bild-Dateien angeh„ngt werden (sogen. Meta-Informationen). Diese Informationen werden als 'Extended Attributes' (EA) gespeichert (zur besonderen Problematik der EA's s.u.).
+
+Es stehen max. 5 separate Info-Felder zur Verfgung. Diese k”nnen benutzt werden, mssen aber nicht. Wenn man ein Feld nicht benutzen m”chte, muss man es auf 'inaktiv' setzen (Rechte Maustaste ber dem jeweiligen Feld-Bezeichner).
+
+Jedes dieser 5 Felder kann nach eigener Wahl benannt werden. Standardm„ssig heissen diese Felder 'Info-1', 'Info-2', etc. šber das Kontext-Men zu jedem dieser Feld-Bezeichner kann man diese Bezeichner „ndern ('Set Caption').
+
+
+Benutzung:
+-------
+
+Um eine Bilddatei mit Meta-Info zu versehen, muss es geladen werden. Dazu gibt es zwei Methoden:
+
+(1) Via Hauptmen -> Datei -> Laden eine Datei ausw„hlen. Das Verzeichnis, aus dem die Datei geladen wird, merkt sich das Programm intern als 'current directory'.
+
+(2) Via Hauptmen -> List stehen zwei Untermens zur Verfgung:
+- current directory
+- browse...
+
+Wenn man 'current directory' ausw„hlt, wird dieses Verzeichnis aufgelistet. W„hlt man 'browse', kann man ein beliebiges (anderes) Verzeichnis ausw„hlen. Dieses wird dann 'current'. Durch Doppelclick auf eine der in der Liste enthaltenen Dateien wird diese geladen und steht dann (wie unter (1)) zur Bearbeitung zur Verfgung. 
+
+'Bearbeitung' heisst: Man kann jetzt in die 5 Info-Felder beliebige Daten, die zur Beschreibung des Bildes dienen, eingeben und dann 'Save Info' klicken.
+
+Konfiguration der Info-Felder:
+-----------------------
+
+Es empfiehlt sich, vor der ersten Benutzung die 5 Info-Felder an die eigenen Bedrfnisse anzupassen, d.h. ihre Bezeichnung zu „ndern. Dazu muss der Mauszeiger auf dem betreffenden Info-Bezeichner positioniert werden (NICHT auf dem dazugeh”rigen Eingabefeld!), dann die rechte Maustaste klicken. Ausw„hlen 'Set Caption'.
+
+Konfiguration eines Bildbearbeitungsprogrammes:
+--------------------------------------
+
+Wenn eine Bilddatei geladen wird, wird ein Preview-Bild (Thumbnail) angezeigt. Um die Bilddatei original anzuzeigen, braucht man ein separates Bildverarbeitungsprogramm, z.B. PMView. Um dieses zu spezifizieren, ber dem Preview-Bild das Kontext-Men aurufen: Auswahl 'Load image into external program'.
+
+Beim ersten Mal erscheint ein Dialog, mit dem man sein pers”nliches Bildbearbeitungsprogramm ausw„hlen kann. Bei sp„teren Aufrufen erscheint dieser Dialog dann nicht mehr.
+
+Wenn man ein anderes Bildbearbeitungsprogramm zuweisen will, muss man bei der Auswahl 'Load image into external program' GLEICHZEITIG die STRG-Taste festhalten.
+
+
+Besondere Problematik der EA's:
+-------------------------
+
+Erweiterte Attribute (EA) gibt es nur unter OS/2, d.h. man kann zwar seine Bilder an Nicht-OS/2-User weitergeben, die Meta-Informationen wandern aber nicht mit.
+
+Die Erweiterten Attribute gehen ausserdem i.d.R. verloren, wenn man ein Bild bearbeitet (z.B. mit PMView). Um das zu verhindern, muss man eine etwaige Bild-Bearbeitung 
+- nur in dem Externen Bildbearbeitungsprogramm vornehmen
+- und nur von innerhalb ImgMeta. ImgMeta sichert die Meta-Informationen vor Aufruf des Externen Bildbearbeitungsprogrammes und stellt sie wieder her nach Rckkehr aus diesem.
+
+Sonstiges:
+--------
+
+Das Programm-Fenster kann beliebig vergr”ssert / verkleinert werden. Einfach an den R„ndern mit der Maus ziehen.

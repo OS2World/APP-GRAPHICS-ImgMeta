@@ -1,0 +1,11 @@
+VX-REXX OS/2 V2.10 Build B3
+VRX: ImgMeta.VRX
+MacroPath: VRM:G:\VXREXX
+EXEPath: 
+RunParameters: 
+RunDirectory: 
+VRXWindow: __VREMainWindow,1,96,48,5767,8000
+VRXWindow: __VRESectionListWindow,1,72,11708,9913,2927
+VRXWindow: __VREToolsWindow,1,84,9973,4987,1665
+UserFile: 1
+UserWindow: Window1,1

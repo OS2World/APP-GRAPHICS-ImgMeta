@@ -1,0 +1,56 @@
+General Description:
+------------------
+
+With ImgMeta you can add your own information to any image-file, to describe them better than its pure filename can. These information (so called meta-data) are stored in the 'Extended Attributes' (EA) of the file (read more about EAs and their special considerations at the end of this help file).
+
+There are up to 5 fields for supplying meta-data. You may use them, but don't have to. Fields that you don't want to use are simply left empty, or better: mark them as 'inactive' (via context-menu over the field's caption).
+
+Each of these fields may be re-named to whatever your personal taste suits, by default they are named 'Info-1', 'Info-2', etc. By using the context-menu over the field's caption you may change that caption.
+
+How to use:
+---------
+
+Look at the program window. The left part is composed of the (thumbnail) image and the entry fields for the description data. The right part is filled with the list of images in the current directory.
+
+The program window may be resized as you like by simply pulling the edges with the left mouse button.
+
+In order to add meta-data to an image you must load it. There are two alternative ways to do it:
+(1) Via Mainmenu -> Load a file. The directory containing the selected file is handled internally as 'current directory'.
+(2) Via Mainmenu -> List you have two submenus
+-current directory
+-browse...
+
+Selecting 'current directory' results in a list of that directory. If you choose 'browse...' then a File Open dialog is presented where you may select any directory of your choice. A doubleclick on one of the files in the list will bring that image into operation, the same as it would using (1).
+
+'Operation' means: You may enter (up to) five informations which describe the image, then click on 'Save Info'.
+
+Configuration of the info-fields:
+------------------------------
+
+It is recommended before the first time usage to rename all of the five info-fields to a name that suit your needs (e.g. 'Location', 'Person', 'Keywords' etc.). To perform a rename you must position the mouse pointer over the appropriate field-caption (NOT the entry field!) and click right mouse button. Select 'Set Caption'.
+
+Configuration of your own Image-Editor program:
+--------------------------------------------
+
+If an image file is loaded a thumbnail image is displayed. In order to edit / display the original image you need a separate program, such as PMView. To start this program you must invoke the context menu over the thumbnail image and select 'Load into external image program'. Or simply click into the thumbnail image.
+
+At first time a dialog appears asking you where to find the image program. In future cases these dialog won't appear.
+
+If you want to specify another image program you must hold down the CTRL-key while clicking on 'Load into external image program' so the File Dialog appears again.
+
+List of Files with Meta-Information:
+--------------------------------
+
+Using the 'List'-function results by default in a list of all files in a directory. You may specify that you want only images listed that have meta-informations. To do this you select List -> Options.
+
+In order to have the list sorted you must invoke the context menu over the list and select your appropriate field as sort-criteria.
+
+Special Considerations with EA's:
+-----------------------------
+
+Extended Attributes (EA) only exist with OS/2, that means, you may pass your images to any non-OS/2-user, but the meta-data will not go with them.
+
+Furthermore, the EA's will most probably get lost after editing and saving an image with e.g. PMView. In order to prevent this, you must
+- edit an image only in that image program that you have specified in ImgMeta,
+- and only from within ImgMeta, because before starting the external image program the EAs will	be saved and restored after return from the external image program.
+
